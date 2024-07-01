@@ -1,4 +1,4 @@
-const apiKey = "7030063da5a541ea8c92a80069a71d7d";
+const apiKey = "YOUR_API_KEY";
 const baseURL = "https://newsapi.org/v2/everything?";
 const loader = document.querySelector(".loader-wrapper");
 const mainContent = document.querySelector("#container-main");
