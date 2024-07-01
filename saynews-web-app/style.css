@@ -1,0 +1,297 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #ffebee);
+    color: #212529;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 80px;
+    margin: 20px 80px;
+    border-radius: 16px;
+    padding: 0.5rem;
+    z-index: 1;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.01);
+}
+
+.navbar-brand h1 {
+    color: #7E0000;
+}
+
+.navbar-brand span {
+    font-size:large;
+}
+
+#search-button {
+    background-color: #7E0000;
+    color: whitesmoke;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 20px;
+    transition: 0.3s background-color;
+}
+
+#search-button:hover {
+    background-color: #A60001;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 500!important;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #000;
+}
+
+@media (min-width: 991px) {
+    
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #A60001;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.navbar-collapse.show {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+    border-radius: 6px;
+    padding: 2rem;
+    z-index: 1;
+    position: relative;
+}
+
+.bcg-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(./assets/133737924_10189461.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.bcg-section::before {
+    background-color: rgba(0, 0, 0, 0.7);
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* Results Section */
+section h2 {
+    font-size: 2rem;
+    font-weight:500;
+    color: #e6e6e6;
+}
+
+/* Dropdown button styling */
+.dropdown .btn-secondary {
+    background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    border: none; /* No border */
+    color: #fff; /* White text color */
+    font-weight: bold; /* Bold text */
+    transition: background 0.3s ease; /* Smooth transition for background */
+  }
+  
+  .dropdown .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.4); /* Slightly darker background on hover */
+  }
+  
+  /* Dropdown menu styling */
+  .dropdown-menu {
+    background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    border: none; /* No border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+  }
+  
+  /* Dropdown item styling */
+  .dropdown-item {
+    color: #000; /* Black text color */
+    font-weight: bold; /* Bold text */
+    transition: background 0.3s ease; /* Smooth transition for background */
+  }
+  
+  .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.4); /* Slightly darker background on hover */
+  }
+  
+
+
+
+/* Cards Styles */
+.card {
+    width: 100%;
+    max-width: 25rem;
+    background: rgba(255, 255, 255, 0.25)!important;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 30rem;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none !important;;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.9)!important;
+    border: none!important;
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: start;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff!important;
+}
+
+.card:hover .card-title {
+    color: #212529!important;
+}
+
+.news-source {
+    display: flex;
+    justify-content: space-between;
+    color: #e6e6e6;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.card:hover .news-source {
+    color: #6c757d;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.card:hover .card-text {
+    color: #495057;
+}
+
+.btn-primary {
+    font-size: 14px;
+    font-weight: 500!important;
+    color: whitesmoke;
+    border-radius: 20px;
+    background: #A60001!important;
+    border: none!important;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: #7E0000!important;
+}
+
+/* Footer Styles */
+footer {
+    background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.3)), url(./assets/pexels-diiefao-2258357.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(15px);
+    color: #000;
+    margin: 20px 80px;
+    border-radius: 16px;
+    z-index: 1;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+footer:hover {
+    transform: scale(1.01);
+}
+
+footer a {
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-icons i {
+    font-size: 1.5rem;
+    margin: 0 15px;
+    /* color: #212529; */
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-icons i:hover {
+    color: #0d6efd;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* Loader presets */
+.loader-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
